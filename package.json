@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jmaitz/twilio-sfmc.git"
+    "url": "git+https://git.heroku.com/twilioapp-dk.git"
   },
   "keywords": [
     "twilio",
