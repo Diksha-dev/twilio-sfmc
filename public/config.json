@@ -34,7 +34,7 @@
        "save": {
            "url": " https://twilioapp-dk.herokuapp.com/activity/save",
             "verb": "POST",
-            "body": "save",
+            "body": "",
             "format": "json",
             "useJwt": false,
             "timeout": 2000
@@ -42,7 +42,7 @@
        "publish": {
            "url": " https://twilioapp-dk.herokuapp.com/activity/publish",
             "verb": "POST",
-            "body": "publish",
+            "body": "",
             "format": "json",
             "useJwt": false,
             "timeout": 2000
@@ -50,7 +50,7 @@
        "validate": {
            "url": " https://twilioapp-dk.herokuapp.com/activity/validate",
             "verb": "POST",
-            "body": "validate",
+            "body": "",
             "format": "json",
             "useJwt": false,
             "timeout": 2000
@@ -58,7 +58,7 @@
        "stop": {
            "url": " https://twilioapp-dk.herokuapp.com/activity/stop",
             "verb": "POST",
-            "body": "stop",
+            "body": "",
             "format": "json",
             "useJwt": false,
             "timeout": 2000
