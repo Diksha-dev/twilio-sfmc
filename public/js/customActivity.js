@@ -92,7 +92,7 @@ define([
         var authToken = $('#authToken').val();
       
         var body = $('#messageBody').val();
-        var phoneNumber = "{{Contact.Attribute.TwilioV1.TwilioNumber}}" ;
+        var phoneNumber = "{{Contact.Default.TwilioNumber}}" ;
         var parsedNumber = `+1${phoneNumber}` 
         console.log("Number"+parsedNumber);
         
