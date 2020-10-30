@@ -94,6 +94,7 @@ define([
         var body = $('#messageBody').val();
         var phoneNumber = "{{Contact.Attribute.TwilioV1.TwilioNumber}}" ;
         var parsedNumber = `+1${phoneNumber}` 
+        console.log("Number"+parsedNumber);
         
         payload['arguments'].execute.inArguments = [{
             "accountSid": accountSid,
