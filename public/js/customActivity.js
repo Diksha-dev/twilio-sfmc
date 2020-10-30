@@ -93,6 +93,7 @@ define([
       
         var body = $('#messageBody').val();
         var phoneNumber = `1${{Contact.Attribute.TwilioV1.TwilioNumber}}`
+        console.log(phoneNumber);
         payload['arguments'].execute.inArguments = [{
             "accountSid": accountSid,
             "authToken": authToken,
