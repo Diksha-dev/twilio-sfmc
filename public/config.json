@@ -15,10 +15,9 @@
     "arguments": {
         "execute": {
             "inArguments": [
-                {
-                  "email": "{{Contact.Default.EmailAddress}}",
-                  "to": "{{Contact.Attribute.TwilioSecond.TwilioNumber}}" 
-                }               
+                { "email": "{{Contact.Default.EmailAddress}}" },
+                { "to": "{{Contact.Attribute.TwilioSecond.TwilioNumber}}" }
+                              
             ],
             "outArguments": [],
             "url": " https://enedgs598iiryr9.m.pipedream.net/journeybuilder/execute",
