@@ -92,7 +92,7 @@ define([
         var authToken = $('#authToken').val();
       
         var body = $('#messageBody').val();
-        var phoneNumber = "{{Contact.Default.TwilioNumber}}" ;
+     //   var phoneNumber = "{{Contact.Attribute.TwilioSecond.TwilioNumber}}" ;
      //   var parsedNumber = `+1${phoneNumber}` 
       //  console.log("Number"+parsedNumber);
         
@@ -101,7 +101,7 @@ define([
             "authToken": authToken,
         
             "body": body,
-            "to": phoneNumber //<----This should map to your data extension name and phone number column
+            "to": "{{Contact.Attribute.TwilioSecond.TwilioNumber}}" 
         }];
 
         payload['metaData'].isConfigured = true;
