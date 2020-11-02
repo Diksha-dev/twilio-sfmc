@@ -59,7 +59,9 @@ define([
                 }
 
               
-
+                 if (key === 'messagingService') {
+                    $('#messagingService').val(val);
+                }
                 if (key === 'body') {
                     $('#messageBody').val(val);
                 }                                                               
@@ -90,18 +92,18 @@ define([
 
         var accountSid = $('#accountSID').val();
         var authToken = $('#authToken').val();
-      
+             var messagingService = $('#messagingService').val();
         var body = $('#messageBody').val();
-     //   var phoneNumber = "{{Contact.Attribute.TwilioSecond.TwilioNumber}}" ;
-     //   var parsedNumber = `+1${phoneNumber}` 
+       var phoneNumber = "{{Contact.Attribute.TwilioSecond.TwilioNumber}}" ;
+       var parsedNumber = `+1${phoneNumber}` 
       //  console.log("Number"+parsedNumber);
         
         payload['arguments'].execute.inArguments = [{
             "accountSid": accountSid,
             "authToken": authToken,
-        
+        "messagingService": messagingService,
             "body": body,
-            "to": "{{Contact.Attribute.TwilioSecond.TwilioNumber}}" 
+            "to": parsedNumber
         }];
 
         payload['metaData'].isConfigured = true;
