@@ -25,7 +25,7 @@
             "body": "",
             "format": "json",
             "useJwt": false,
-            "timeout": 2000
+            "timeout": 100000
         }
     },
     "configurationArguments": {
@@ -44,7 +44,7 @@
             "body": "",
             "format": "json",
             "useJwt": false,
-            "timeout": 2000
+            "timeout": 100000
        },
        "validate": {
            "url": " https://twilioapp-dk.herokuapp.com/journeybuilder/validate",
