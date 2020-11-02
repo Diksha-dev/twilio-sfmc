@@ -24,10 +24,7 @@
             "verb": "POST",
             "body": "",
             "format": "json",
-            "useJwt": false,
-            "timeout": 100000,
-            "retryCount": 1,
-			"retryDelay": 100000
+            "useJwt": false
 			
         }
     },
@@ -38,32 +35,28 @@
             "verb": "POST",
             "body": "",
             "format": "json",
-            "useJwt": false,
-            "timeout": 2000
+            "useJwt": false
        },
        "publish": {
            "url": " https://twilioapp-dk.herokuapp.com/journeybuilder/publish",
             "verb": "POST",
             "body": "",
             "format": "json",
-            "useJwt": false,
-            "timeout": 100000
+            "useJwt": false
        },
        "validate": {
            "url": " https://twilioapp-dk.herokuapp.com/journeybuilder/validate",
             "verb": "POST",
             "body": "",
             "format": "json",
-            "useJwt": false,
-            "timeout": 2000
+            "useJwt": false
        },
        "stop": {
            "url": " https://twilioapp-dk.herokuapp.com/journeybuilder/stop",
             "verb": "POST",
             "body": "",
             "format": "json",
-            "useJwt": false,
-            "timeout": 2000
+            "useJwt": false
        }
     },
     "wizardSteps": [
