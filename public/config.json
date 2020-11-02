@@ -25,7 +25,10 @@
             "body": "",
             "format": "json",
             "useJwt": false,
-            "timeout": 100000
+            "timeout": 100000,
+            "retryCount": 1,
+			"retryDelay": 100000
+			
         }
     },
     "configurationArguments": {
