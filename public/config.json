@@ -38,7 +38,7 @@
             "useJwt": false
        },
        "publish": {
-           "url": " https://enfu1zn9r00jh3q.m.pipedream.net/journeybuilder/publish",
+           "url": " https://twilioapp-dk.herokuapp.com/journeybuilder/publish",
             "verb": "POST",
             "body": "",
             "format": "json",
