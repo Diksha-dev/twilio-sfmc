@@ -14,7 +14,7 @@ var activity    = require('./routes/activity');
 var app = express();
 
 // Configure Express
-app.set('port', process.env.PORT || 10000);
+app.set('port', process.env.PORT || 4000);
 app.use(bodyParser.json({type: 'application/json'})); 
 //app.use(bodyParser.urlencoded({ extended: true }));
 
