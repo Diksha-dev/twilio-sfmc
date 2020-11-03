@@ -43,7 +43,7 @@ app.post('/journeybuilder/publish/', activity.publish,timeout('5s'), bodyParser.
     if (req.timedout) return
     res.send('saved as id ' + id)
   })
-});
+})
 function haltOnTimedout (req, res, next) {
   if (!req.timedout) next()
 }
