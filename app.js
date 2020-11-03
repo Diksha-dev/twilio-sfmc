@@ -36,23 +36,8 @@ app.post('/logout', routes.logout );
 // Custom Hello World Activity Routes
 app.post('/journeybuilder/save/', activity.save );
 app.post('/journeybuilder/validate/', activity.validate );
-//app.post('/journeybuilder/publish/', activity.publish );
-app.post('/journeybuilder/publish/', activity.publish,timeout('5s'), bodyParser.json(), haltOnTimedout, function (req, res, next) {
-  savePost(req.body, function (err, id) {
-    if (err) return next(err)
-    if (req.timedout) return
-    res.send('saved as id ' + id)
-  })
-})
-function haltOnTimedout (req, res, next) {
-  if (!req.timedout) next()
-}
+app.post('/journeybuilder/publish/', activity.publish );
 
-function savePost (post, cb) {
-  setTimeout(function () {
-    cb(null, ((Math.random() * 40000) >>> 0))
-  }, (Math.random() * 7000) >>> 0)
-}
 
 
 app.post('/journeybuilder/execute/', activity.execute );
