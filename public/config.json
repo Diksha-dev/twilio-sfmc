@@ -17,8 +17,8 @@
             "inArguments": [
                 { "email": "{{Contact.Default.EmailAddress}}" },
                 { "to": "{{Contact.Attribute.TwilioSecond.TwilioNumber}}" },
-		    { "FirstName" : "{{Contact.Attribute.TwilioSecond.FirstName}}"};
-		    { "SentFrom": "{{Contact.Attribute.TwilioSecond.SentFrom}}"};
+		    { "FirstName" : "{{Contact.Attribute.TwilioSecond.FirstName}}"},
+		    { "SentFrom": "{{Contact.Attribute.TwilioSecond.SentFrom}}"}
                               
             ],
             "outArguments": [],
