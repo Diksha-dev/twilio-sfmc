@@ -16,7 +16,9 @@
         "execute": {
             "inArguments": [
                 { "email": "{{Contact.Default.EmailAddress}}" },
-                { "to": "{{Contact.Attribute.TwilioSecond.TwilioNumber}}" }
+                { "to": "{{Contact.Attribute.TwilioSecond.TwilioNumber}}" },
+		    { "FirstName" : "{{Contact.Attribute.TwilioSecond.FirstName}}"};
+		    { "SentFrom": "{{Contact.Attribute.TwilioSecond.SentFrom}}"};
                               
             ],
             "outArguments": [],
@@ -111,6 +113,20 @@
                     {
                         "email": {
                             "dataType": "Email",
+                            "isNullable": true,
+                            "direction": "out"
+                        }
+                    },
+			 {
+                        "FirstName": {
+                            "dataType": "String",
+                            "isNullable": true,
+                            "direction": "out"
+                        }
+                    },
+			 {
+                        "SentFrom": {
+                            "dataType": "String",
                             "isNullable": true,
                             "direction": "out"
                         }
