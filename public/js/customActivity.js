@@ -93,7 +93,12 @@ define([
         var accountSid = $('#accountSID').val();
         var authToken = $('#authToken').val();
       //       var from = $('#messagingService').val();
-        var body = $('#messageBody').val();
+        var intialbody = $('#messageBody').val();
+        var FirstName = "{{Contact.Attribute.TwilioSecond.FirstName}}";
+        var SentFrom = "{{Contact.Attribute.TwilioSecond.SentFrom}}";
+        var body1 = FirstName.concat(intialbody);
+        var body = body1.concat(SentFrom);
+        
        var phoneNumber = "{{Contact.Attribute.TwilioSecond.TwilioNumber}}" ;
        var parsedNumber = `+1${phoneNumber}` 
       //  console.log("Number"+parsedNumber);
