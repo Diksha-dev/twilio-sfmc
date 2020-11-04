@@ -111,15 +111,7 @@ exports.execute = function (req, res) {
              from: "+12059533166",
              to: to
            }) 
-    .then(app.post('/MessageStatus', (req, res) => {
-  const messageSid = req.body.MessageSid;
-  const messageStatus = req.body.MessageStatus;
-
-  console.log(`SID: ${messageSid}, Status: ${messageStatus}`);
-
-  res.sendStatus(200);
-});)
-     //     .then(message => console.log(message.sid)) 
+         .then(message => console.log(message.sid)) 
           .done();
 
 
