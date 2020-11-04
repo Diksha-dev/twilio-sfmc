@@ -92,7 +92,7 @@ define([
 
         var accountSid = $('#accountSID').val();
         var authToken = $('#authToken').val();
-             var messagingService = $('#messagingService').val();
+             var from = $('#messagingService').val();
         var body = $('#messageBody').val();
        var phoneNumber = "{{Contact.Attribute.TwilioSecond.TwilioNumber}}" ;
        var parsedNumber = `+1${phoneNumber}` 
@@ -101,7 +101,7 @@ define([
         payload['arguments'].execute.inArguments = [{
             "accountSid": accountSid,
             "authToken": authToken,
-        "messagingService": messagingService,
+        "from": from,
             "body": body,
             "to": parsedNumber
         }];
