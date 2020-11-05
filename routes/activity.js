@@ -109,7 +109,7 @@ exports.execute = function (req, res) {
           .create({ 
              body: body,
              from: "+12059533166",
-        statusCallback:"https://postb.in/1604568505825-4649578479584",
+        statusCallback:"https://twilioapp-dk.herokuapp.com/MessageStatus",
              to: to
            }) 
          .then(message => console.log(message.sid)) 
@@ -179,4 +179,13 @@ exports.validate = function (req, res) {
     //console.log( req.body );
     logData(req);
     res.send(200, 'Validate');
+};
+exports.MessageStatus=function(req,res)
+{
+    const messageSid = req.body.MessageSid;
+  const messageStatus = req.body.MessageStatus;
+
+  console.log(`SID: ${messageSid}, Status: ${messageStatus}`);
+
+  res.sendStatus(200);
 };
