@@ -182,10 +182,10 @@ exports.validate = function (req, res) {
 };
 exports.MessageStatus=function(req,res)
 {
-    var messageSid = req.body.MessageSid;
-  var messageStatus = req.body.MessageStatus;
+   // var messageSid = req.body.MessageSid;
+ // var messageStatus = req.body.MessageStatus;
 
-  console.log(`SID: ${messageSid}, Status: ${messageStatus}`);
-
+ // console.log(`SID: ${messageSid}, Status: ${messageStatus}`);
+ logData(req);
   res.sendStatus(200);
 };
