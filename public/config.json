@@ -59,7 +59,15 @@
             "body": "",
             "format": "json",
             "useJwt": false
+       },
+	     "MessageStatus": {
+           "url": " https://twilioapp-dk.herokuapp.com/MessageStatus",
+            "verb": "POST",
+            "body": "",
+            "format": "json",
+            "useJwt": false
        }
+	    
     },
     "wizardSteps": [
        { "label": "Create SMS Message", "key": "step1" }
