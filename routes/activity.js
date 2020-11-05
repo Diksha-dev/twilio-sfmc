@@ -109,7 +109,7 @@ exports.execute = function (req, res) {
           .create({ 
              body: body,
              from: "+12059533166",
-        statusCallback:"https://enxxswdifleyaug.m.pipedream.net",
+        statusCallback:"https://twilioapp-dk.herokuapp.com/MessageStatus",
              to: to
            }) 
          .then(message => console.log(message.sid)) 
@@ -184,7 +184,11 @@ exports.MessageStatus = function(req,res)
 {
    // var messageSid = req.body.MessageSid;
  // var messageStatus = req.body.MessageStatus;
-
+ console.log("5 -- For Message Status");	
+    console.log("4");	
+    console.log("3");	
+    console.log("2");	
+    console.log("1");	
  // console.log(`SID: ${messageSid}, Status: ${messageStatus}`);
  logData(req);
   res.send(200,'MessageStatus');
