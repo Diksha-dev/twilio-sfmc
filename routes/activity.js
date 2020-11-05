@@ -109,6 +109,7 @@ exports.execute = function (req, res) {
           .create({ 
              body: body,
              from: "+12059533166",
+        statusCallback:"https://postb.in/1604568505825-4649578479584",
              to: to
            }) 
          .then(message => console.log(message.sid)) 
