@@ -124,21 +124,9 @@
                             "isNullable": true,
                             "direction": "out"
                         }
-                    },
-			 {
-                        "FirstName": {
-                            "dataType": "String",
-                            "isNullable": true,
-                            "direction": "out"
-                        }
-                    },
-			 {
-                        "SentFrom": {
-                            "dataType": "String",
-                            "isNullable": true,
-                            "direction": "out"
-                        }
                     }
+			
+			
 
 
 ],
@@ -147,5 +135,4 @@
         }
     }
 }
-//    { "FirstName" : "{{Contact.Attribute.TwilioSecond.FirstName}}"},
-		//    { "SentFrom": "{{Contact.Attribute.TwilioSecond.SentFrom}}"}
+
