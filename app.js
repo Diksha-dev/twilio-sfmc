@@ -41,7 +41,7 @@ app.post('/journeybuilder/publish/', activity.publish );
 
 
 app.post('/journeybuilder/execute/', activity.execute );
-app.post('/messagestatus', activity.messagestatus);
+app.post('/journeybuilder/messagestatus/', activity.messagestatus);
 
 
 
