@@ -180,21 +180,4 @@ exports.validate = function (req, res) {
     logData(req);
     res.send(200, 'Validate');
 };
-exports.MessageStatus = function(req,res)
-{
-   // var messageSid = req.body.MessageSid;
- // var messageStatus = req.body.MessageStatus;
- console.log("5 -- For Message Status");	
-    console.log("4");	
-    console.log("3");	
-    console.log("2");	
-    console.log("1");
-     console.log("5 -- For Message Status");	
-    console.log("4");	
-    console.log("3");	
-    console.log("2");	
-    console.log("1");	
- //console.log(`SID: ${messageSid}, Status: ${messageStatus}`);
- logData(req);
-  res.send(200,'MessageStatus');
-};
+
