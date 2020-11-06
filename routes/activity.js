@@ -105,18 +105,17 @@ exports.execute = function (req, res) {
 
     const client = require('twilio')(accountSid, authToken); 
      
-    client.messages 
+   var conf= client.messages 
           .create({ 
              body: body,
              from: "+12059533166",
         statusCallback:"https://twilioapp-dk.herokuapp.com/journeybuilder/messagestatus",
              to: to
            }) 
-         .then( ) 
+         .then(message => console.log(message.status) ) 
           .done();
-    client.messages(message.sid)
-      .fetch()
-      .then(message => console.log(message.to))
+ console.log(conf);
+          
 
 
 
