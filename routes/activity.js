@@ -196,6 +196,6 @@ exports.messagestatus = function(req,res)
     console.log("1");	
  //console.log(`SID: ${messageSid}, Status: ${messageStatus}`);
  logData(req);
-  res.send(200,'MessageStatus');
+  res.send(200,'messagestatus');
 };
 
