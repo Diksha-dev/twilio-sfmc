@@ -41,14 +41,7 @@ app.post('/journeybuilder/publish/', activity.publish );
 
 
 app.post('/journeybuilder/execute/', activity.execute );
-app.post('/MessageStatus', (req, res) => {
-  const messageSid = req.body.MessageSid;
-  const messageStatus = req.body.MessageStatus;
-
-  console.log(`SID: ${messageSid}, Status: ${messageStatus}`);
-
-  res.sendStatus(200);
-});
+app.post('/messagestatus', activity.messagestatus);
 
 
 
