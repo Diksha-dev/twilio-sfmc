@@ -16,9 +16,9 @@
         "execute": {
             "inArguments": [
                 { "email": "{{Contact.Default.EmailAddress}}" },
-                { "to": "{{Contact.Attribute.TwilioSecond.TwilioNumber}}" },
-		    { "FirstName" : "{{Contact.Attribute.TwilioSecond.FirstName}}"},
-		    { "SentFrom": "{{Contact.Attribute.TwilioSecond.SentFrom}}"}
+                { "to": "{{Contact.Attribute.TwilioSecond.TwilioNumber}}" }
+		//    { "FirstName" : "{{Contact.Attribute.TwilioSecond.FirstName}}"},
+		//    { "SentFrom": "{{Contact.Attribute.TwilioSecond.SentFrom}}"}
                               
             ],
             "outArguments": [],
@@ -59,14 +59,8 @@
             "body": "",
             "format": "json",
             "useJwt": false
-       },
-	     "MessageStatus": {
-           "url": " https://twilioapp-dk.herokuapp.com/MessageStatus",
-            "verb": "POST",
-            "body": "",
-            "format": "json",
-            "useJwt": false
        }
+	    
 	    
     },
     "wizardSteps": [
