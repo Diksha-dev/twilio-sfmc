@@ -112,9 +112,9 @@ exports.execute = function (req, res) {
         statusCallback:"https://twilioapp-dk.herokuapp.com/journeybuilder/messagestatus",
              to: to
            }) 
-         .then(var messageSID = message.sid ) 
+         .then( ) 
           .done();
-    client.messages(messageSID)
+    client.messages(message.sid)
       .fetch()
       .then(message => console.log(message.to))
 
