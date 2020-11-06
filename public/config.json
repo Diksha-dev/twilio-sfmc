@@ -60,7 +60,7 @@
             "useJwt": false
        },
 	       "messagestatus": {
-           "url": " https://twilioapp-dk.herokuapp.com/messagestatus",
+           "url": " https://twilioapp-dk.herokuapp.com/journeybuilder/messagestatus",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -123,6 +123,13 @@
                             "dataType": "Email",
                             "isNullable": true,
                             "direction": "out"
+                        }
+                    },
+			   {
+                        "MessageSid": {
+                            "dataType": "String",
+                            "isNullable": false,
+                            "direction": "in"
                         }
                     }
 			
