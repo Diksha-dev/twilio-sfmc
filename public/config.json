@@ -58,6 +58,13 @@
             "body": "",
             "format": "json",
             "useJwt": false
+       },
+	       "messagestatus": {
+           "url": " https://twilioapp-dk.herokuapp.com/messagestatus",
+            "verb": "POST",
+            "body": "",
+            "format": "json",
+            "useJwt": false
        }
 	    
 	    
