@@ -109,12 +109,12 @@ exports.execute = function (req, res) {
           .create({ 
              body: body,
              from: "+12059533166",
-        
+        statusCallback:"https://twilioapp-dk.herokuapp.com/journeybuilder/messagestatus",
              to: to
            }) 
-         .then(message => client.messages(message.sid)
+         .then(client.messages(message.sid)
       .fetch()
-      .then(message => console.log(message.to));) 
+      .then(message => console.log(message.to)) ) 
           .done();
 
 
