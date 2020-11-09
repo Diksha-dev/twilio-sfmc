@@ -114,7 +114,7 @@ exports.execute = function (req, res) {
            }) 
          .then(message => console.log(message.status) ) 
           .done();
- console.log(conf);
+ console.log("status"+message.status);
           
 
 
