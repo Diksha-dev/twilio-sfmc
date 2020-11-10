@@ -212,7 +212,8 @@ request.post({
     'sid':'sid',
     'status':'status',
     'to':'to',
-    'sids':'sid'
+    'sids':'sid',
+    'sidss':'sid'
 }
 ]
 },
