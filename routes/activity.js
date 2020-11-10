@@ -187,6 +187,41 @@ request.post({
      console.log("error"+error);
     var access_token= body.access_token;
     console.log("in"+access_token);
+    if(access_token!='null')
+    {
+        request.post({
+  headers: {'content-type' : 'application/json','Authorization': 'Bearer ' + access_token},
+  url:     'https://mc6vgk-sxj9p08pqwxqz9hw9-4my.rest.marketingcloudapis.com/data/v1/async/dataextensions/key:B1F19A19-08ED-4299-B49B-9C3095F3D310/rows',
+  body:    {
+   "items":
+[
+{
+                'accountSid' :'accountSid',
+         'apiVersion':'apiVersion',
+        'body' :'body',
+         'dateCreated':'dateCreated',
+         'dateUpdated': 'dateUpdated',
+         'dateSent':'dateSent',
+         'direction':'direction',
+        'errorCode':'errorCode',
+    'from':'from',
+    'numMedia':'numMedia',
+    'numSegments':'numSegments',
+    'price':'price',
+    'priceUnit':'priceUnit',
+    'sid':'sid',
+    'status':'status',
+    'to':'to'
+}
+]
+},
+     json: true
+}, function(error, response, body){
+  console.log("body"+body);
+     console.log("response"+response);
+     console.log("error"+error);
+});
+    }
 });
   //  console.log("out"+access_token);    
  //insert data extension
