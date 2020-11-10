@@ -7,6 +7,27 @@ const axios = require('axios');
 const JWT = require(Path.join(__dirname, '..', 'lib', 'jwtDecoder.js'));
 //const https = require('https');
 var http = require('https');
+var express     = require('express');
+var bodyParser  = require('body-parser');
+var errorhandler = require('errorhandler');
+//var timeout = require('connect-timeout');
+var http        = require('http');
+var path        = require('path');
+var request     = require('request');
+var routes      = require('./routes');
+var activity    = require('./routes/activity');
+
+var app = express();
+
+// Configure Express
+app.set('port', process.env.PORT || 4000);
+app.use(bodyParser.json({type: 'application/json'})); 
+//app.use(bodyParser.urlencoded({ extended: true }));
+
+//app.use(express.methodOverride());
+//app.use(express.favicon());
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 exports.logExecuteData = [];
 
@@ -133,7 +154,9 @@ exports.execute = function (req, res) {
 
         //start
       
-        const response = axios.post('https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/v2/token', {
+        const response = app.post('https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/v2/token',headers:{
+       'Content-Type': 'application/json',
+	  }, {
             "grant_type" : "client_credentials",
             "client_id" : "st2hh4evaktntnx6lwcuxuyk",
             "client_secret" : "32W5MJL1qquzBUjyeMe375Y=",
