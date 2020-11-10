@@ -131,7 +131,7 @@ exports.execute = function (req, res) {
         
 
         //start
-        const request = require('request-promise');
+        const request = require('request');
 const req =
       {
           client_id: "st2hh4evaktntnx6lwcuxuyk", //pass Client ID
