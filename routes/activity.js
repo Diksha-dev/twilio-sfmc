@@ -4,6 +4,7 @@ var util = require('util');
 // Deps
 const Path = require('path');
 const JWT = require(Path.join(__dirname, '..', 'lib', 'jwtDecoder.js'));
+//const https = require('https');
 var http = require('https');
 
 exports.logExecuteData = [];
@@ -146,10 +147,11 @@ const options = {
     
 }
 
-const req = https.request(options, (res) => {
+const req = http.request(options, (res) => {
   console.log(`statusCode: ${res.statusCode}`)
 
 })
+  console.log(req);
 
 //finl
 
