@@ -121,9 +121,10 @@ exports.execute = function (req, res) {
         // http://www.twilio.com/docs/api/rest/sending-sms#example-1
 
         console.log(responseData.sid); 
-        console.log(responseData.status);
-         console.log(responseData.date_sent); 
-         console.log(responseData.messaging_service_sid); 
+        console.log(responseData.SmsStatus);
+         console.log(responseData.MessageStatus); 
+         console.log(responseData.MessageSid); 
+        console.log(responseData.ApiVersion);
        var from = responseData.from;
         console.log(from);
     }
