@@ -187,6 +187,7 @@ request.post({
      console.log("error"+error);
     var access_token= body.access_token;
     console.log("in"+access_token);
+    console.log("Sid"+sid);
     //insert data extension
    request.post({
   headers: {'content-type' : 'application/json','Authorization': 'Bearer ' + access_token},
@@ -219,6 +220,9 @@ request.post({
   console.log("body"+body);
      console.log("response"+response);
      console.log("error"+error);
+       console.log("requestId"+body.requestId);
+       console.log("resultMessages"+body.resultMessages);
+       
 });
     
      //complete data extension
