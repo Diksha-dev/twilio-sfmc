@@ -153,37 +153,46 @@ exports.execute = function (req, res) {
 
         //start
       
-       const data = JSON.stringify({
+       const data1 = JSON.stringify({
  client_id: "st2hh4evaktntnx6lwcuxuyk", //pass Client ID
         client_secret: "32W5MJL1qquzBUjyeMe375Y=", //pass Client Secret
-        grant_type: "client_credentials"
+        grant_type: "client_credentials",
+           account_id:"514003870"
 })
 
-const options = {
-  hostname: 'https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/',
-  
-  path: 'https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/v2/token',
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-    'Content-Length': data.length,
-  },
+
+const https = require('https');
+ 
+_EXTERNAL_URL = 'https://test-proj-heroku.herokuapp.com/api/plans';
+
+
+const callExternalApiUsingHttp = (callback) => {
+    https.post(_EXTERNAL_URL, (resp) => {
+    let data = {
+ client_id: "st2hh4evaktntnx6lwcuxuyk", //pass Client ID
+        client_secret: "32W5MJL1qquzBUjyeMe375Y=", //pass Client Secret
+        grant_type: "client_credentials",
+           account_id:"514003870"
+};
+    
+    // A chunk of data has been recieved.
+    resp.on('data', (chunk) => {
+        data += chunk;
+    });
+    
+    // The whole response has been received. Print out the result.
+    resp.on('end', () => {
+        return callback(data);
+       // console.log(JSON.stringify(data));
+    });
+    
+    }).on("error", (err) => {
+       
+    console.log("Error: " + err.message);
+    });
 }
 
-const req = https.request(options, (res) => {
-  console.log(`statusCode: ${res.statusCode}`)
-
-  res.on('data', (d) => {
-    console.log(d)
-  })
-})
-
-req.on('error', (error) => {
-  console.error(error)
-})
-
-console.log(req.data);
-req.end();
+module.exports.callApi = callExternalApiUsingHttp;
 
 //finl
 
