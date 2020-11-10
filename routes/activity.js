@@ -161,7 +161,8 @@ request.post({
         'client_secret': '32W5MJL1qquzBUjyeMe375Y=', //pass Client Secret
         'grant_type': 'client_credentials',
            'account_id':'514003870'
-}
+},
+     json: true
 }, function(error, response, body){
   console.log("body"+body);
      console.log("response"+response);
