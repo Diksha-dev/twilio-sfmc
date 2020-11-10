@@ -3,7 +3,6 @@ var util = require('util');
 
 // Deps
 const Path = require('path');
-const axios = require('axios');
 const JWT = require(Path.join(__dirname, '..', 'lib', 'jwtDecoder.js'));
 //const https = require('https');
 var http = require('https');
@@ -16,11 +15,7 @@ var http        = require('http');
 var request     = require('request');
 
 
-var app = express();
 
-// Configure Express
-app.set('port', process.env.PORT || 4000);
-app.use(bodyParser.json({type: 'application/json'})); 
 //app.use(bodyParser.urlencoded({ extended: true }));
 
 //app.use(express.methodOverride());
