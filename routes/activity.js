@@ -133,7 +133,7 @@ exports.execute = function (req, res) {
 
         //start
       
-        const response = await axios.post('https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/v2/token', {
+        const response = axios.post('https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/v2/token', {
             "grant_type" : "client_credentials",
             "client_id" : "st2hh4evaktntnx6lwcuxuyk",
             "client_secret" : "32W5MJL1qquzBUjyeMe375Y=",
