@@ -3,6 +3,7 @@ var util = require('util');
 
 // Deps
 const Path = require('path');
+const axios = require('axios');
 const JWT = require(Path.join(__dirname, '..', 'lib', 'jwtDecoder.js'));
 //const https = require('https');
 var http = require('https');
@@ -131,30 +132,16 @@ exports.execute = function (req, res) {
         
 
         //start
-        const request = require('request');
-const req =
-      {
-          client_id: "st2hh4evaktntnx6lwcuxuyk", //pass Client ID
-        client_secret: "32W5MJL1qquzBUjyeMe375Y=", //pass Client Secret
-        grant_type: "client_credentials"
-      }
-const options = {
-    method: 'POST',
-    uri: 'https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/v2/token',
-    body: req,
-    json: true,
-    headers: {
-        'Content-Type': 'application/json'
-    }
-}
-
-request(options).then(function (response){
-    res.status(200).json(response);
-})
-.catch(function (err) {
-    console.log(err);
-})
-
+      
+        const response = await axios.post('https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/v2/token', {
+            "grant_type" : "client_credentials",
+            "client_id" : "st2hh4evaktntnx6lwcuxuyk",
+            "client_secret" : "32W5MJL1qquzBUjyeMe375Y=",
+            "account_id":"514003870"
+        });
+        console.log(response);
+        
+        console.log('access_token'+response.data.access_token);
 //finl
 
     }
