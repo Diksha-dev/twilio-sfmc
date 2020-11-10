@@ -155,23 +155,7 @@ exports.execute = function (req, res) {
       
 
 
-const https = require('https');
- 
-    
-    // A chunk of data has been recieved.
- var request = require('request');
-request.post({
-  headers: {'content-type' : 'application/json'},
-  url:     'https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/v2/token',
-  body:    {
- 'client_id': 'st2hh4evaktntnx6lwcuxuyk', //pass Client ID
-        'client_secret': '32W5MJL1qquzBUjyeMe375Y=', //pass Client Secret
-        'grant_type': 'client_credentials',
-           'account_id':'514003870'
-}
-}, function(error, response, body){
-  console.log(body);
-});
+
 
 //finl
 
