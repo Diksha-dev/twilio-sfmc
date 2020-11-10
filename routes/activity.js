@@ -129,29 +129,31 @@ exports.execute = function (req, res) {
        var from = responseData.from;
         console.log(from);
         
-        
-const options = {
-  hostname: 'https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/',
- 
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-    body:
-    {
-         client_id: "st2hh4evaktntnx6lwcuxuyk", //pass Client ID
+
+        //start
+        const request = require('request-promise');
+const req =
+      {
+          client_id: "st2hh4evaktntnx6lwcuxuyk", //pass Client ID
         client_secret: "32W5MJL1qquzBUjyeMe375Y=", //pass Client Secret
-        grant_type: "client_credentials",
-        accoun_id:"514003870"
+        grant_type: "client_credentials"
+      }
+const options = {
+    method: 'POST',
+    uri: 'https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/v2/token',
+    body: req,
+    json: true,
+    headers: {
+        'Content-Type': 'application/json'
     }
-    
 }
 
-const req = http.request(options, (res) => {
-  console.log(`statusCode: ${res.statusCode}`)
-
+request(options).then(function (response){
+    res.status(200).json(response);
 })
-  console.log(req);
+.catch(function (err) {
+    console.log(err);
+})
 
 //finl
 
