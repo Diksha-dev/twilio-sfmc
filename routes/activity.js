@@ -191,29 +191,12 @@ request.post({
     //insert data extension
    request.post({
   headers: {'content-type' : 'application/json','Authorization': 'Bearer ' + access_token},
-  url:     'https://mc6vgk-sxj9p08pqwxqz9hw9-4my.rest.marketingcloudapis.com/data/v1/async/dataextensions/key:B1F19A19-08ED-4299-B49B-9C3095F3D310/rows',
+  url:     'https://mc6vgk-sxj9p08pqwxqz9hw9-4my.rest.marketingcloudapis.com/data/v1/async/dataextensions/key:CB6261AF-A671-4E0D-9646-AFE4E8FA7236/rows',
   body:    {
    "items":
 [
-{
-                'accountSid' :'accountSid',
-         'apiVersion':'apiVersion',
-        'body' :'body',
-         'dateCreated':'dateCreated',
-         'dateUpdated': 'dateUpdated',
-         'dateSent':'dateSent',
-         'direction':'direction',
-        'errorCode':'errorCode',
-    'from':'from',
-    'numMedia':'numMedia',
-    'numSegments':'numSegments',
-    'price':'price',
-    'priceUnit':'priceUnit',
-    'sid':'sid',
-    'status':'status',
-    'to':'to',
-    'sids':'sid',
-    'sidss':'sid'
+    {
+        'sid':'sid'
 }
 ]
 },
