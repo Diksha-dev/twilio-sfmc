@@ -150,7 +150,7 @@ exports.execute = function (req, res) {
       
 const https = require('https');
  
-    
+    console.log("near");
     // A chunk of data has been recieved.
  var request = require('request');
 request.post({
@@ -163,9 +163,11 @@ request.post({
            'account_id':'514003870'
 }
 }, function(error, response, body){
-  console.log(body);
+  console.log("body"+body);
+     console.log("response"+response);
+     console.log("error"+error);
 });
-
+console.log("pass");
 
 
 //finl
