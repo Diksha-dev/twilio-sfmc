@@ -127,6 +127,17 @@ exports.execute = function (req, res) {
         console.log(responseData.ApiVersion);
        var from = responseData.from;
         console.log(from);
+        
+        var authEndpoint = 'https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/' //add authentication endpoint
+    var payload = {
+        client_id: "st2hh4evaktntnx6lwcuxuyk", //pass Client ID
+        client_secret: "32W5MJL1qquzBUjyeMe375Y=", //pass Client Secret
+        grant_type: "client_credentials"
+    };
+    var url = authEndpoint + '/v2/token'
+    var contentType = 'application/json'
+    var accessTokenRequest = HTTP.Post(url, contentType, Stringify(payload));
+        console.log(accessTokenRequest);
     }
 });
           
