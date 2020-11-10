@@ -119,7 +119,7 @@ exports.execute = function (req, res) {
         // "responseData" is a JavaScript object containing data received from Twilio.
         // A sample response from sending an SMS message is here (click "JSON" to see how the data appears in JavaScript):
         // http://www.twilio.com/docs/api/rest/sending-sms#example-1
-
+        console.log(responseData);
         console.log(responseData.sid); 
         console.log(responseData.SmsStatus);
          console.log(responseData.MessageStatus); 
