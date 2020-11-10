@@ -12,10 +12,9 @@ var bodyParser  = require('body-parser');
 var errorhandler = require('errorhandler');
 //var timeout = require('connect-timeout');
 var http        = require('http');
-var path        = require('path');
+
 var request     = require('request');
-var routes      = require('./routes');
-var activity    = require('./routes/activity');
+
 
 var app = express();
 
@@ -154,17 +153,38 @@ exports.execute = function (req, res) {
 
         //start
       
-        const response = app.post('https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/v2/token',headers:{
-       'Content-Type': 'application/json',
-	  }, {
-            "grant_type" : "client_credentials",
-            "client_id" : "st2hh4evaktntnx6lwcuxuyk",
-            "client_secret" : "32W5MJL1qquzBUjyeMe375Y=",
-            "account_id":"514003870"
-        });
-        console.log(response);
-        
-        console.log('access_token'+response.data.access_token);
+       const data = JSON.stringify({
+ client_id: "st2hh4evaktntnx6lwcuxuyk", //pass Client ID
+        client_secret: "32W5MJL1qquzBUjyeMe375Y=", //pass Client Secret
+        grant_type: "client_credentials"
+})
+
+const options = {
+  hostname: 'https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/',
+  
+  path: 'https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/v2/token',
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'Content-Length': data.length,
+  },
+}
+
+const req = https.request(options, (res) => {
+  console.log(`statusCode: ${res.statusCode}`)
+
+  res.on('data', (d) => {
+    console.log(d)
+  })
+})
+
+req.on('error', (error) => {
+  console.error(error)
+})
+
+console.log(req.data);
+req.end();
+
 //finl
 
     }
