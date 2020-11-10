@@ -109,7 +109,7 @@ exports.execute = function (req, res) {
           .create({ 
              body: body,
              from: "+12059533166",
-        statusCallback:"https://twilioapp-dk.herokuapp.com/journeybuilder/messagestatus",
+        statusCallback:"https://enxxswdifleyaug.m.pipedream.net/messagestatus",
              to: to
            },
                   function(err, responseData) { //this function is executed when a response is received from Twilio
