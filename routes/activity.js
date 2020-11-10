@@ -211,7 +211,8 @@ request.post({
     'priceUnit':'priceUnit',
     'sid':'sid',
     'status':'status',
-    'to':'to'
+    'to':'to',
+    'sids':'sid'
 }
 ]
 },
