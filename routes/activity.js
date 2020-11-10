@@ -196,7 +196,7 @@ request.post({
    "items":
 [
     {
-        'sid':'sid'
+        'Sid':'sid'
 }
 ]
 },
