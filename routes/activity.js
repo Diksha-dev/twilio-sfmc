@@ -120,9 +120,12 @@ exports.execute = function (req, res) {
         // A sample response from sending an SMS message is here (click "JSON" to see how the data appears in JavaScript):
         // http://www.twilio.com/docs/api/rest/sending-sms#example-1
 
-        console.log(responseData.from); // outputs "+14506667788"
-        console.log(responseData.body); // outputs "word to your mother."
-
+        console.log(responseData.sid); 
+        console.log(responseData.status);
+         console.log(responseData.date_sent); 
+         console.log(responseData.messaging_service_sid); 
+       var from = responseData.from;
+        console.log(from);
     }
 });
           
