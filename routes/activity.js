@@ -164,7 +164,7 @@ request.post({
 },
      json: true
 }, function(error, response, body){
-  console.log("body"+body);
+  console.log("Access"+body.access_token);
      console.log("response"+response);
      console.log("error"+error);
 });
