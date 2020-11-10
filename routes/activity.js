@@ -188,7 +188,7 @@ request.post({
     var access_token= body.access_token;
     console.log("in"+access_token);
 });
-    console.log("out"+access_token);    
+  //  console.log("out"+access_token);    
  //insert data extension
        
 console.log("pass");
