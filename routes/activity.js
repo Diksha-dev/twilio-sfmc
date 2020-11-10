@@ -21,7 +21,7 @@ var request     = require('request');
 //app.use(express.methodOverride());
 //app.use(express.favicon());
 
-app.use(express.static(path.join(__dirname, 'public')));
+
 
 exports.logExecuteData = [];
 
