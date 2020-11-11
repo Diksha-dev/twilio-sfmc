@@ -196,22 +196,7 @@ request.post({
    "items":
 [
     {
-       'accountSid' :accountSid,
-         'apiVersion':apiVersion,
-        'body' :body,
-         'dateCreated':dateCreated,
-         'dateUpdated': dateUpdated,
-         'dateSent':dateSent,
-         'direction':direction,
-        'errorCode':errorCode,
-    'from':from,
-    'numMedia':numMedia,
-    'numSegments':numSegments,
-    'price':price,
-    'priceUnit':priceUnit,
-    'sid':sid,
-    'status':status,
-    'to':to,
+      
     'sids':sid,
     'sidss':sid
 }
