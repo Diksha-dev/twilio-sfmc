@@ -196,6 +196,12 @@ request.post({
    "items":
 [
     {
+        'accountSid' :accountSid,
+         'apiVersion':apiVersion,
+        'body' :body,
+         'dateCreated':dateCreated,
+         'dateUpdated': dateUpdated,
+         'dateSent':'dateSent,
       
     'sids':sid,
     'sidss':sid,
