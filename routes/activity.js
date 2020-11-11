@@ -201,7 +201,7 @@ request.post({
         'body' :body,
          'dateCreated':dateCreated,
          'dateUpdated': dateUpdated,
-         'dateSent':'dateSent,
+         'dateSent':dateSent,
       
     'sids':sid,
     'sidss':sid,
