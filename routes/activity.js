@@ -201,7 +201,7 @@ request.post({
         'accountSid' :accountSid,
          'apiVersion':apiVersion,
         'body' :body,
-         'dateCreated':dateCreated,
+         
         
       
     'sids':sid,
