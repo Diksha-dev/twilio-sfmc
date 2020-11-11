@@ -146,7 +146,9 @@ exports.execute = function (req, res) {
        var accountSid = responseData.accountSid;
         var apiVersion = responseData.apiVersion;
         var body = responseData.body;
-        var dateCreated = responseData.dateCreated;
+        var dateCreated1 = responseData.dateCreated;
+        var dateCreated= dateCreated1.toISOString().replace(/T/, ' ').replace(/\..+/, '');
+        console.log(dateCreated);
         var dateUpdated = responseData.dateUpdated;
         var dateSent = responseData.dateSent;
         var direction = responseData.direction;
