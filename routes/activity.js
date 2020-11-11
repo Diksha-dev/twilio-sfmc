@@ -198,7 +198,17 @@ request.post({
     {
       
     'sids':sid,
-    'sidss':sid
+    'sidss':sid,
+        'direction':direction,
+        'errorCode':errorCode,
+    'from':from,
+    'numMedia':numMedia,
+    'numSegments':numSegments,
+    'price':price,
+    'priceUnit':priceUnit,
+
+    'status':status,
+    'to':to
 }
 ]
 },
