@@ -198,8 +198,7 @@ request.post({
    "items":
 [
     {
-        'accountSid' :accountSid,
-         'apiVersion':apiVersion,
+       
         'body' :body,
          
         
