@@ -43,10 +43,76 @@ console.log(q.search); //returns '?type=page&action=update&id=5221'
  
 var qdata = q.query; // returns an object: { type: page, action: 'update',id='5221' }
  //returns 'page'
-console.log(qdata.Body); //returns 'update'
-console.log(qdata.To); //returns '5221
+var Body = qdata.Body; //returns 'update'
+var Tonumber = qdata.To; //returns '5221
+  var SmsMessageSid=qdata.SmsMessageSid;
+    var ToCountry=qdata.ToCountry;
+    var SmsSid=qdata.SmsSid;
+    
+    
+  //  var To = Tonumber.replace('+', '');
+    
+    
   
+  //insert into data extension
+    
+    const https = require('https');
+ 
+    console.log("near");
+    // A chunk of data has been recieved.
+ var request = require('request');
+request.post({
+  headers: {'content-type' : 'application/json'},
+  url:     'https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/v2/token',
+  body:    {
+ 'client_id': 'st2hh4evaktntnx6lwcuxuyk', //pass Client ID
+        'client_secret': '32W5MJL1qquzBUjyeMe375Y=', //pass Client Secret
+        'grant_type': 'client_credentials',
+           'account_id':'514003870'
+},
+     json: true
+}, function(error, response, body){
+  console.log("Access"+body.access_token);
+     console.log("response"+response);
+     console.log("error"+error);
+    var access_token= body.access_token;
+    console.log("in"+access_token);
    
+    //insert data extension
+   request.post({
+  headers: {'content-type' : 'application/json','Authorization': 'Bearer ' + access_token},
+  url:     'https://mc6vgk-sxj9p08pqwxqz9hw9-4my.rest.marketingcloudapis.com/data/v1/async/dataextensions/key:177E4257-1831-47D9-900B-506123389886/rows',
+  body:    {
+   "items":
+[
+    {
+       
+        
+  "ToCountry" :	ToCountry,
+        "SmsMessageSid":SmsMessageSid,
+"SmsSid":SmsSid,
+
+"Body":Body,
+        "To":Tonumber
+
+        
+}
+]
+},
+     json: true
+}, function(error, response, body){
+  console.log("body"+body);
+     console.log("response"+response);
+     console.log("error"+error);
+       console.log("requestId"+body.requestId);
+       console.log("resultMessages"+body.resultMessages);
+       
+});
+    
+     //complete data extension
+});
+    
+    //insserted into data extension
     
 };
 
