@@ -42,11 +42,8 @@ app.post('/journeybuilder/publish/', activity.publish );
 
 
 app.post('/journeybuilder/execute/', activity.execute );
-app.post('/journeybuilder/messagestatus/', activity.messagestatus);
-app.post('/', (req, res) => {
-  const twiml = new MessagingResponse();
-  console.log(req.body.Body);
-});
+app.post('/messageresponse', activity.messagestatus);
+
 
 
 
