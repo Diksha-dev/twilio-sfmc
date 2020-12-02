@@ -36,6 +36,10 @@ exports.messageresponse=function(req,res)
      res.on('data', function (chunk) {
         data += chunk;
     });
+     res.on('end', function () {
+        console.log(data);
+
+    });
     
 };
 
