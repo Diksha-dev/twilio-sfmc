@@ -10,7 +10,7 @@ var path        = require('path');
 var request     = require('request');
 var routes      = require('./routes');
 var activity    = require('./routes/activity');
-const MessagingResponse = require('twilio').twiml.MessagingResponse;
+
 
 var app = express();
 
@@ -42,7 +42,7 @@ app.post('/journeybuilder/publish/', activity.publish );
 
 
 app.post('/journeybuilder/execute/', activity.execute );
-
+app.post('/messageresponse', activity.messagestatus);
 
 
 
