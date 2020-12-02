@@ -318,7 +318,8 @@ exports.messagestatus = function(req,res)
     console.log("2");	
     console.log("1");
      console.log("5 -- For Message Status");	
-    console.log(req.body);
+    var req2 = req;
+    console.log(req2);
  //console.log(`SID: ${messageSid}, Status: ${messageStatus}`);
      res.send(200, 'messagestatus');
 
