@@ -322,6 +322,9 @@ exports.messagestatus = function(req,res)
     var req3=req.body;
     console.log("req2"+req2);
         console.log("req3"+req3);
+    var req4=req.body.To;
+     console.log("to"+req4);
+    
     
  //console.log(`SID: ${messageSid}, Status: ${messageStatus}`);
      res.send(200, 'messagestatus');
