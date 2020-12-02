@@ -31,7 +31,8 @@ exports.logout = function( req, res ) {
 exports.messageresponse=function(req,res)
 {
     console.log(req);
-    console.log("res"+res);
-    res.redirect('/messagestatus');
+    console.log("messageresponseres"+res);
+    console.log("body"+res.body);
+    
 };
 
