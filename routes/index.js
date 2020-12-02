@@ -50,7 +50,7 @@ var Tonumber = qdata.To; //returns '5221
     var SmsSid=qdata.SmsSid;
     
     
-  //  var To = Tonumber.replace('+', '');
+   var To = Tonumber.replace('+', '');
     
     
   
@@ -93,7 +93,7 @@ request.post({
 'SmsSid':SmsSid,
 
 'Body':Body,
-        'To':Tonumber
+        'To':To
 
         
 }
