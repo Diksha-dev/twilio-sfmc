@@ -45,10 +45,10 @@ var qdata = q.query; // returns an object: { type: page, action: 'update',id='52
  //returns 'page'
 console.log(qdata.Body); //returns 'update'
 console.log(qdata.To); //returns '5221
-    console.log(req.url);
-    console.log(req.Url);
-    console.log(res.url);
-    console.log(res.Url);
+    console.log("this"+req.url);
+    console.log("is"+req.Url);
+    console.log("it"+res.url);
+    console.log("jjj"+res.Url);
     
 };
 
