@@ -34,7 +34,7 @@ exports.messageresponse=function(req,res)
     console.log("messageresponseres"+res);
     console.log("body"+res.body);
 var url = require('url');
-var address = 'path';
+var address =  req.url;
 var q = url.parse(address, true);
  
 console.log(q.host); //returns 'localhost:8080'
@@ -45,10 +45,8 @@ var qdata = q.query; // returns an object: { type: page, action: 'update',id='52
  //returns 'page'
 console.log(qdata.Body); //returns 'update'
 console.log(qdata.To); //returns '5221
-    console.log("this"+req.url);
-    console.log("is"+req.Url);
-    console.log("it"+res.url);
-    console.log("jjj"+res.Url);
+  
+   
     
 };
 
