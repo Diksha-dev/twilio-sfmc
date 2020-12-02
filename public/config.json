@@ -61,7 +61,7 @@
        },
 	       "messagestatus": {
            "url": " https://twilioapp-dk.herokuapp.com/journeybuilder/messagestatus",
-            "verb": "POST",
+            "verb": "GET",
             "body": "",
             "format": "json",
             "useJwt": false
