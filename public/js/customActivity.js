@@ -100,7 +100,7 @@ define([
      //   var body = body1.concat(SentFrom);
         
        var phoneNumber = "{{Contact.Attribute.TwilioSecond.TwilioNumber}}" ;
-       var parsedNumber = `+91${phoneNumber}` 
+       var parsedNumber = `+${phoneNumber}` 
       //  console.log("Number"+parsedNumber);
         
         payload['arguments'].execute.inArguments = [{
