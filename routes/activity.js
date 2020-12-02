@@ -307,7 +307,7 @@ exports.validate = function (req, res) {
     logData(req);
     res.send(200, 'Validate');
 };
-exports.messageresponse = function(req,res)
+exports.messagestatus = function(req,res)
 {
    // var messageSid = req.body.MessageSid;
  // var messageStatus = req.body.MessageStatus;
@@ -320,6 +320,6 @@ exports.messageresponse = function(req,res)
     console.log(req.body);
  //console.log(`SID: ${messageSid}, Status: ${messageStatus}`);
  logData(req);
-  res.send(200,'messageresponse');
+  res.send(200,'messagestatus');
 };
 
