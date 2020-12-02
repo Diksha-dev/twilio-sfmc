@@ -28,5 +28,10 @@ exports.login = function( req, res ) {
 exports.logout = function( req, res ) {
     req.session.token = '';
 };
-
+exports.messageresponse=function(req,res)
+{
+    console.log(req);
+    console.log("res"+res);
+    res.redirect('/messagestatus');
+};
 
