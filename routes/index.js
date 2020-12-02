@@ -48,7 +48,7 @@ console.log(qdata.To); //returns '5221
     console.log(req.url);
     console.log(req.Url);
     console.log(res.url);
-    console.log(res.Url):
+    console.log(res.Url);
     
 };
 
