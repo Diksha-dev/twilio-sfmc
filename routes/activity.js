@@ -160,7 +160,9 @@ console.log("Helooo This is execute");
           var priceUnit = responseData.priceUnit;
           var sid = responseData.sid;  
         var status = responseData.status;
-        var to = responseData.to;
+        var tonumber = responseData.to;
+          var to = tonumber.replace('+', '');
+        
         
         
      
