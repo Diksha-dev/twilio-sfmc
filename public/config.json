@@ -21,7 +21,7 @@
                               
             ],
             "outArguments": [],
-            "url": " https://twilioapp-dk.herokuapp.com/journeybuilder/execute",
+            "url": " https://758531a00b43520eb492c7189ed5592b.m.pipedream.net/execute",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -32,28 +32,28 @@
     "configurationArguments": {
       "applicationExtensionKey": "906b6adc-b590-4eb8-8383-0258013fc05f",
        "save": {
-           "url": " https://twilioapp-dk.herokuapp.com/journeybuilder/save",
+           "url": " https://758531a00b43520eb492c7189ed5592b.m.pipedream.net/save",
             "verb": "POST",
             "body": "",
             "format": "json",
             "useJwt": false
        },
        "publish": {
-           "url": " https://twilioapp-dk.herokuapp.com/journeybuilder/publish",
+           "url": " https://758531a00b43520eb492c7189ed5592b.m.pipedream.net/publish",
             "verb": "POST",
             "body": "",
             "format": "json",
             "useJwt": false
        },
        "validate": {
-           "url": " https://twilioapp-dk.herokuapp.com/journeybuilder/validate",
+           "url": " https://758531a00b43520eb492c7189ed5592b.m.pipedream.net/validate",
             "verb": "POST",
             "body": "",
             "format": "json",
             "useJwt": false
        },
        "stop": {
-           "url": " https://twilioapp-dk.herokuapp.com/journeybuilder/stop",
+           "url": " https://758531a00b43520eb492c7189ed5592b.m.pipedream.net/stop",
             "verb": "POST",
             "body": "",
             "format": "json",
