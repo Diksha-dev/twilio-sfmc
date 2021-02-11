@@ -9,7 +9,7 @@ var http = require('https');
 var express     = require('express');
 var bodyParser  = require('body-parser');
 var errorhandler = require('errorhandler');
-//var timeout = require('connect-timeout');
+const public= require(Path.join(__dirname, './public/config.json'));
 var http        = require('http');
 
 var request     = require('request');
@@ -288,9 +288,9 @@ exports.publish = function (req, res) {
     
     // Data from the req and put it in an array accessible to the main app.
     //console.log( req.body );
-    const customQuantityValues = require('./public/config.json');
+   
     console.log("Hii");
-    console.log(customQuantityValues);
+    console.log(public);
   logData(req);
     res.send(200, 'Publish');
 };
