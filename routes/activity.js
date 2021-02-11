@@ -9,7 +9,7 @@ var http = require('https');
 var express     = require('express');
 var bodyParser  = require('body-parser');
 var errorhandler = require('errorhandler');
-const public= require(Path.join(__dirname, './public/config.json'));
+
 var http        = require('http');
 
 var request     = require('request');
@@ -292,7 +292,7 @@ exports.publish = function (req, res) {
     console.log("Hii");
     var activity    = require('./public/config');
     console.log(activity);
-    console.log(public);
+
   logData(req);
     res.send(200, 'Publish');
 };
