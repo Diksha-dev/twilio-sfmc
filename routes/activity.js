@@ -290,7 +290,7 @@ exports.publish = function (req, res) {
     //console.log( req.body );
    
     console.log("Hii");
-    var activity    = require('./public/config');
+    var activity    = require('./config');
     console.log(activity);
 
   logData(req);
