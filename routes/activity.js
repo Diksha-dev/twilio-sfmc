@@ -290,7 +290,7 @@ exports.publish = function (req, res) {
     //console.log( req.body );
  //  var routes      = require('./public');
     console.log("Hii");
-  conslog.log(publicforjson);
+  console.log(publicforjson);
 
   logData(req);
     res.send(200, 'Publish');
