@@ -288,9 +288,9 @@ exports.publish = function (req, res) {
     
     // Data from the req and put it in an array accessible to the main app.
     //console.log( req.body );
-   var routes      = require('./public');
+ //  var routes      = require('./public');
     console.log("Hii");
-    var activity    = require('./config');
+  var activity    = require('/config.json');
     console.log(activity);
 
   logData(req);
