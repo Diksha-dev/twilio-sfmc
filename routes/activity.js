@@ -288,6 +288,7 @@ exports.publish = function (req, res) {
     
     // Data from the req and put it in an array accessible to the main app.
     //console.log( req.body );
+    const customQuantityValues = require('./public/config.json');
   logData(req);
     res.send(200, 'Publish');
 };
