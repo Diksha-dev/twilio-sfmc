@@ -85,7 +85,7 @@ exports.edit = function (req, res) {
 /*
  * POST Handler for /save/ route of Activity.
  */
-exports.save =  function async (req, res) =>{
+exports.save =  function async (req, res){
     
     console.log("5 -- For Save");	
     console.log("4");	
@@ -97,8 +97,8 @@ exports.save =  function async (req, res) =>{
     // Data from the req and put it in an array accessible to the main app.
     console.log( req.body );
    // logData(req);
-    async function () 
-    res.send(200, 'Save');
+  
+   await res.send(200, 'Save');
 };
 
 /*
