@@ -85,7 +85,7 @@ exports.edit = function (req, res) {
 /*
  * POST Handler for /save/ route of Activity.
  */
-exports.save =  async (req, res) =>{
+exports.save =  function async (req, res) =>{
     
     console.log("5 -- For Save");	
     console.log("4");	
