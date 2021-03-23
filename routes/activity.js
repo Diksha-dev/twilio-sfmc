@@ -93,12 +93,12 @@ exports.save =  function async (req, res){
     console.log("2");	
     console.log("1");	
     //console.log("Saved: "+req.body.inArguments[0]);
-    
+    var a=await consolefunction();
     // Data from the req and put it in an array accessible to the main app.
     console.log( req.body );
    // logData(req);
   
-   await res.send(200, 'Save');
+    res.send(200, 'Save');
 };
 
 /*
@@ -336,4 +336,9 @@ exports.messagestatus = function(req,res)
  //console.log(`SID: ${messageSid}, Status: ${messageStatus}`);
      res.send(200, 'messagestatus');
 
+};
+async function consolefunction()
+{
+    console.log("Hyyy");
+    return;
 };
